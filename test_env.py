@@ -1,0 +1,11 @@
+from env import StudyEnvironment
+env = StudyEnvironment()
+s = env.reset()
+print('reset OK')
+r1 = env.step({'complete_task_id': 1})
+print('step1:', r1['reward'])
+r2 = env.step({'complete_task_id': 2})
+print('step2:', r2['reward'])
+r3 = env.step({'complete_task_id': 3})
+print('step3:', r3['reward'], 'done:', r3['done'])
+print('ALL PASSED')
